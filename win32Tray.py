@@ -42,11 +42,16 @@ def Close():
     win32api.PostQuitMessage(0)
 
 
-def setup(icon):
-    icon.visible = True
+def setup(iconObject):
+    """
+    do as documents says to fit OS-X
+    :param iconObject:
+    :return:None
+    """
+    iconObject.visible = True
 
 
-image = Image.open("test.ico")
+image = Image.open("Office.ico")
 menu = (item('auto login', LoginAction),
         item('logout', LogoutAction),
         item('Exit', Close))
